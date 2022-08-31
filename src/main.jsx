@@ -4,6 +4,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import App from './App'
 import UserNew from './UserNew'
 
+import "bootstrap/dist/css/bootstrap.min.css"
+
 ReactDOM.createRoot(document.getElementById('root')).render(
 <BrowserRouter>
   <Routes>

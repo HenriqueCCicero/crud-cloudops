@@ -31,21 +31,31 @@ export default function UserNew() {
   }
 
   return (
-    <div className="App">
-      <Link to='/'>Voltar</Link>
+    <div className="container">
+      <Link to='/' className="btn btn-primary">Voltar</Link>
+
       <form onSubmit={handleSubmit}>
-        <input type="text" onChange={event => setName(event.target.value)} />
-        <input type="email" onChange={event => setEmail(event.target.value)} />
-        <input type="text" onChange={event => setPhone(event.target.value)} />
         <div>
-          <input type="checkbox" onChange={event => manageJobs(1)} />
+          <label>Nome</label>
+          <input type="text" onChange={event => setName(event.target.value)} className="form-control" />
+        </div>
+        <div>
+          <label>E-mail</label>
+          <input type="email" onChange={event => setEmail(event.target.value)} className="form-control" />
+        </div>
+        <div>
+          <label>Telefone</label>
+          <input type="text" onChange={event => setPhone(event.target.value)} className="form-control" />
+        </div>
+        <div>
+          <input type="checkbox" onChange={event => manageJobs(2)} className="form-check-input" />
           <label>Frontend</label>
         </div>
         <div>
-          <input type="checkbox" onChange={event => manageJobs(2)} />
+          <input type="checkbox" onChange={event => manageJobs(1)} className="form-check-input" />
           <label>Backend</label>
         </div>
-        <button>Criar</button>
+        <button className="btn btn-success">Criar</button>
       </form>
     </div>
   )

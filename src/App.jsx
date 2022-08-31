@@ -9,13 +9,16 @@ export default function App() {
     const {data} = await axios.get("http://localhost:3000/api/list-users.php") //destruturacao de objeto(response)
     setUsers(data)
   }
+
   useEffect(() => {
     getUsers()
   }, [])
+
   return (
-    <div className="App">
-      <Link to='/usuarios/novo'>Criar usuario</Link>
-      <table>
+    <div className="container">
+      <Link to='/usuarios/novo' className="btn btn-primary">Criar usuario</Link>
+
+      <table className="table table-hover table-striped">
         <thead>
           <tr>
             <th>#</th>
